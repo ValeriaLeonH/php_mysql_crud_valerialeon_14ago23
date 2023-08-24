@@ -3,9 +3,9 @@
 
   $conn = mysqli_connect(
     'localhost', 
-    'root'
+    'root',
     '',
-    'php php_mysql_crud_valerialeon_23ago23'
+    'php_mysql_crud_valerialeon_23ago23'
   ) or die (mysqli_error($mysqli)); // Haciendo conexion con los parametros de basededatos
 
 
