@@ -1,9 +1,9 @@
 <?php
   include('database/db.php');
 
-  if(isset($_POST['save_task'])){
+  if(isset($_POST['save_task'])) {
     $title = $_POST['title'];
-    $title = $_POST['description'];
+    $description = $_POST['description'];
     $image = getimagesize($_FILES['image']['tmp_name']);
     if($image !== false){
       $image = $_FILES['image']['tmp_name'];
@@ -11,5 +11,16 @@
     } else {
       $img_content = "";
     }
+    $query = "INSERT INTO task(title, description, image) VALUES('$title', '$description', '$img_content')";
+    $result = mysqli_query($conn, $query);
+  
+
+    if(!$result) {
+      die("Query failed");
+    }
+
+    $_SESSION['message'] = 'Task Saved Successfully';
+    $_SESSION['message_type'] = 'success';
+    header('Location: index.php');
   }
 ?>
