@@ -6,6 +6,7 @@
   include("includes/header.php"); //linkeo de header 
 ?>
 
+
 <main class="container p-4">
   <div class="row">
     <div class="col-md-4">
