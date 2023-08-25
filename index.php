@@ -48,28 +48,28 @@
         </thead>
         <tbody>
 
-        <?php
-          $query = "SELECT * FROM task";
-          $result_tasks = mysqli_query($conn, $query);
+          <?php
+            $query = "SELECT * FROM task";
+            $result_tasks = mysqli_query($conn, $query);
 
-          while($row = mysqli_fetch_assoc($result_tasks)) {
-          ?>
-          <tr>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['description']; ?></td>
-            <td><?php echo $row['created_at']; ?></td>
-            <td class="resize-image">
-              <img src="image.php?id=<?php echo $row['id'] ?>" alt="image" class="w-100">
-            </td>
-            <td>
-              <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary rounded-circle">
-                <ion-icon name="create"></ion-icon>
-              </a>
-              <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger rounded-circle">
-                <ion-icon name="trash"></ion-icon>
-              </a>
-            </td>
-          </tr>
+            while($row = mysqli_fetch_assoc($result_tasks)) {
+            ?>
+            <tr>
+              <td><?php echo $row['title']; ?></td>
+              <td><?php echo $row['description']; ?></td>
+              <td><?php echo $row['created_at']; ?></td>
+              <td class="resize-image">
+                <img src="image.php?id=<?php echo $row['id'] ?>" alt="image" class="w-100">
+              </td>
+              <td>
+                <a href="edit.php?id=<?php echo $row['id']?>" class="btn btn-secondary rounded-circle">
+                  <ion-icon name="create"></ion-icon>
+                </a>
+                <a href="delete_task.php?id=<?php echo $row['id']?>" class="btn btn-danger rounded-circle">
+                  <ion-icon name="trash"></ion-icon>
+                </a>
+              </td>
+            </tr>
           <?php } ?>
         </tbody>
       </table>
