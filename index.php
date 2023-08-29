@@ -16,7 +16,7 @@
         <?= $_SESSION['message']?>
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      <?= session_unset(); } ?>
+      <?php session_unset(); } ?>
       
       <!-- ADD TASK FORM-->
       <div class="card card-body">
