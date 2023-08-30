@@ -7,8 +7,8 @@
 ?>
 
 
-<main class="container p-4">
-  <div class="row">
+<main class="container p-4 mt-5 mb-5">
+  <div class="row mt-5">
     <div class="col-md-4">
       <!-- MESSAGES -->
       <?php if(isset($_SESSION['message'])) { ?>

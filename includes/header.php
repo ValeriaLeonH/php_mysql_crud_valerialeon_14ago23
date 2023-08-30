@@ -10,11 +10,11 @@
 </head>
 <body>
   <header>
-    <nav class="navbar bg-body-tertiary">
+    <nav class="navbar bg-body-tertiary fixed-header">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <i class="bi bi-bell-fill"></i>
-          Pagina de tareas
+        <a class="navbar-brand align-elements" href="index.php">
+          <i class="bi bi-bell-fill me-3"></i>
+          <span>Pagina de tareas</span>
         </a>
       </div>
     </nav>
